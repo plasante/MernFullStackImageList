@@ -1,19 +1,19 @@
 import React from 'react';
+import { Grid, Image } from 'semantic-ui-react';
 
 const ImageList = (props) => {
-
-  const images = props.images.hits;
+  const images = props.images;
 
   return (
-    <div>
-      {images  ?
-        (images.map((image) => (
-          <img key={image.id} src={image.webformatURL} alt={image.description}/>))
-        ) : (
-          <p>No images available</p>
-        )
+    <Grid columns={3}>
+      {
+        images.map((image) => (
+          <Grid.Column key={image.id}>
+            <Image src={image.webformatURL} alt={image.description} style={{height: "200px"}}/>
+          </Grid.Column>
+        ))
       }
-    </div>
+    </Grid>
   );
 };
 
