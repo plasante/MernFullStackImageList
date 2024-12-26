@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const SearchInput = (props) => {
 
   const {onSearchSubmit} = props;
 
-  const [entry, setEntry] = React.useState('');
+  const [entry, setEntry] = useState('');
 
   const onInputChange = (event) => {
     setEntry(event.target.value);

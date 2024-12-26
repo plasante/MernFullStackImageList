@@ -5,16 +5,20 @@ const ImageList = (props) => {
   const images = props.images;
 
   return (
-    <Grid columns={3}>
-      {
-        images.map((image) => (
-          <Grid.Column key={image.id}>
-            <Image src={image.webformatURL} alt={image.description} style={{height: "200px"}}/>
-          </Grid.Column>
-        ))
-      }
-    </Grid>
-  );
+    images && images.length > 0 ? (
+      <Grid columns={3}>
+        {
+          images.map((image) => (
+            <Grid.Column key={image.id}>
+              <Image src={image.webformatURL} alt={image.description} style={{height: "200px"}}/>
+            </Grid.Column>
+          ))
+        }
+      </Grid>
+    ) : (
+      <span>No images to show</span>
+    )
+  )
 };
 
 export default ImageList;
