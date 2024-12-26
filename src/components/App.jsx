@@ -3,6 +3,7 @@ import SearchInput from "./SearchInput";
 import ImageList from "./ImageList";
 import axios from "axios";
 import 'semantic-ui-css/semantic.min.css';
+import '../index.css';
 
 const App = () => {
 
@@ -22,7 +23,7 @@ const App = () => {
 
 
   return (
-    <div className={'ui container'} style={{marginTop:'30px'}}>
+    <div className={'ui container custom-container'} style={{marginTop:'30px'}}>
       <SearchInput onSearchSubmit={onSearchSubmit} />
       <ImageList images={images} />
     </div>

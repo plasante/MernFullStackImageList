@@ -1,0 +1,5 @@
+@media screen and (min-width: 1200px) {
+    .ui.container.custom-container {
+        background-color: beige;
+    }
+}
