@@ -9,7 +9,7 @@ const ImageList = (props) => {
       <Grid columns={3}>
         {
           images.map((image) => (
-            <Grid.Column key={image.id}>
+            <Grid.Column key={image.id} mobile={16} tablet={8} computer={4}>
               <Image src={image.webformatURL} alt={image.description} style={{height: "200px"}}/>
             </Grid.Column>
           ))
